@@ -91,3 +91,7 @@ lerna-debug.log
 .DS_Store
 Thumbs.db
 valid-keys.txt
+
+# Docker
+Dockerfile
+.dockerignore
