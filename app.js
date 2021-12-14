@@ -11,6 +11,11 @@ var authRouter = require('./routes/auth');
 var paymentRouter = require('./routes/payment');
 var shipmentRouter = require('./routes/shipment');
 var operationRouter = require('./routes/operations');
+var dd_options = {
+    'response_code':true,
+    'tags': ['app:diplomado-final']
+  }
+var connect_datadog = require('connect-datadog')(dd_options);
 
 var app = express();
 
@@ -72,5 +77,5 @@ app.get("/debug-sentry", function mainHandler(req, res) {
 app.use(Sentry.Handlers.errorHandler());
 
 
-
+app.use(connect_datadog);
 module.exports = app;
