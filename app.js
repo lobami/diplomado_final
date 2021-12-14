@@ -20,7 +20,7 @@ var connect_datadog = require('connect-datadog')(dd_options);
 var app = express();
 
 Sentry.init({
-    dsn: "https://529ce53558a742b39945bf9f78d51a61@o1090184.ingest.sentry.io/6105947",
+    dsn: "https://4d8b324f0bbc4d5d89dbd31a069ffa35@o1090313.ingest.sentry.io/6106163",
     integrations: [
         // enable HTTP calls tracing
         new Sentry.Integrations.Http({ tracing: true }),
