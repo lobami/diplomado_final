@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.2180" tests="18" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-12-14T01:07:26" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="express_authentication" timestamp="2021-12-14T01:07:26" tests="7" file="/home/loth/git-repos/escuela/diplomado/proyect/test/index.spec.js" time="1.1070" failures="0">
+    <testcase name="express_authentication Should generate an API key and add it to file" time="0.5060" classname="Should generate an API key and add it to file">
+    </testcase>
+    <testcase name="express_authentication Should generate 5 unique API Keys" time="0.5040" classname="Should generate 5 unique API Keys">
+    </testcase>
+    <testcase name="express_authentication Should return the API Key back in response" time="0.0500" classname="Should return the API Key back in response">
+    </testcase>
+    <testcase name="express_authentication Should send a 401 if the x-api-key header is not present" time="0.0080" classname="Should send a 401 if the x-api-key header is not present">
+    </testcase>
+    <testcase name="express_authentication Should send a 401 if the x-api-key is invalid" time="0.0060" classname="Should send a 401 if the x-api-key is invalid">
+    </testcase>
+    <testcase name="express_authentication Should validate header for protected routes" time="0.0190" classname="Should validate header for protected routes">
+    </testcase>
+    <testcase name="express_authentication Should not require auth headers for unprotected routes" time="0.0140" classname="Should not require auth headers for unprotected routes">
+    </testcase>
+  </testsuite>
+  <testsuite name="operation check" timestamp="2021-12-14T01:07:27" tests="4" file="/home/loth/git-repos/escuela/diplomado/proyect/test/operation.spec.js" time="0.0420" failures="0">
+    <testcase name="operation check check a sum" time="0.0190" classname="check a sum">
+    </testcase>
+    <testcase name="operation check check a substract" time="0.0070" classname="check a substract">
+    </testcase>
+    <testcase name="operation check check a divide" time="0.0080" classname="check a divide">
+    </testcase>
+    <testcase name="operation check check a multiply" time="0.0080" classname="check a multiply">
+    </testcase>
+  </testsuite>
+  <testsuite name="payment check" timestamp="2021-12-14T01:07:27" tests="5" file="/home/loth/git-repos/escuela/diplomado/proyect/test/payment.spec.js" time="1.0410" failures="0">
+    <testcase name="payment check Should generate an random price" time="0.5020" classname="Should generate an random price">
+    </testcase>
+    <testcase name="payment check Should generate 5 random prices" time="0.5030" classname="Should generate 5 random prices">
+    </testcase>
+    <testcase name="payment check Should return 5 promo codes" time="0.0120" classname="Should return 5 promo codes">
+    </testcase>
+    <testcase name="payment check Return the discount status" time="0.0120" classname="Return the discount status">
+    </testcase>
+    <testcase name="payment check Return the price status created" time="0.0120" classname="Return the price status created">
+    </testcase>
+  </testsuite>
+  <testsuite name="shipment check" timestamp="2021-12-14T01:07:28" tests="2" file="/home/loth/git-repos/escuela/diplomado/proyect/test/shipment.spec.js" time="0.0280" failures="0">
+    <testcase name="shipment check Return a create shipment" time="0.0140" classname="Return a create shipment">
+    </testcase>
+    <testcase name="shipment check Return a ramdon address in status endpoint" time="0.0140" classname="Return a ramdon address in status endpoint">
+    </testcase>
+  </testsuite>
+</testsuites>
