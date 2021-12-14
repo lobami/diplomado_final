@@ -4,7 +4,7 @@ var paymentController = require('../controllers/payment.controller');
 var middleware = require('../middleware');
 
 
-//router.use(middleware);
+router.use(middleware);
 
 router
     .get('/promos', paymentController.getPromos)

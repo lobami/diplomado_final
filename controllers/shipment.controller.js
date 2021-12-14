@@ -8,7 +8,6 @@ module.exports = {
         res.status(201).send({ address: faker.address.streetAddress(), price: faker.commerce.price(), name: faker.name.findName(), email: faker.internet.email()});
     },
     changeStatus: function (req, res) {
-        console.log('¿')
         //Debera de retornar una dirección random
         // codigo de respuesta 201
         // data la direcciòn random

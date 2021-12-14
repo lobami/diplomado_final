@@ -81,6 +81,43 @@ describe('payment check', () => {
                 done();
             })
     });
+
+
+    it('Return the discount status', done => {
+        agent = chai.request.agent(server);
+            agent
+            .get('/auth')
+            .then(({body: {apiKey}}) => {
+                return Promise.all([
+                    agent
+                        .post('/payment/discount')
+                        .set('x-api-key', apiKey)
+                ])
+                
+            })
+            .then(promos => {
+                promos[0].body.should.eql({ message: 'values updated' });
+                done();
+            })
+    });
+
+    it('Return the price status created', done => {
+        agent = chai.request.agent(server);
+            agent
+            .get('/auth')
+            .then(({body: {apiKey}}) => {
+                return Promise.all([
+                    agent
+                        .get('/payment/create')
+                        .set('x-api-key', apiKey)
+                ])
+                
+            })
+            .then(promos => {
+                promos[0].body.should.eql({ message: 'price created' });
+                done();
+            })
+    });
 });
 
 

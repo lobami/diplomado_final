@@ -4,7 +4,7 @@ var shipmentController = require('../controllers/shipment.controller');
 var middleware = require('../middleware');
 
 
-//router.use(middleware);
+router.use(middleware);
 
 router
     .post('/', shipmentController.createShipment)

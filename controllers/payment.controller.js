@@ -7,14 +7,14 @@ module.exports = {
     create: function (req, res) {
         const fd = fs.openSync(PAYMENT_FILE_PATH, 'a');
         fs.appendFileSync(fd, faker.commerce.price() + LINE_ENDING, 'utf8');
-        res.status(201).send();
+        res.status(201).send({ message: "price created"});
     },
 
     applyDiscount: function (req, res) {
         //debera de restar una cantidad a cada precio en payment-generated.txt
         fs.readFile(PAYMENT_FILE_PATH, 'utf8', function (err, data) {
             if (err) {
-                return console.log(err);
+                res.status(500).send({error: err})
             }
             let newValues = []
             let value = req.body.value
