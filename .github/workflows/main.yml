@@ -1,4 +1,4 @@
-name: Tests
+name: Test to deploy in heroku
 on:
   push:
     branches:
