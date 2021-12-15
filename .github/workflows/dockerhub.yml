@@ -1,4 +1,4 @@
-name: ci
+name: test to deploy to dockerhub
 
 on:
   push:
